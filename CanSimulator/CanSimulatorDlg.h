@@ -3,6 +3,8 @@
 //
 
 #pragma once
+#include "afxwin.h"
+#include "afxdtctl.h"
 
 
 // CCanSimulatorDlg ¶Ô»°¿ò
@@ -30,4 +32,14 @@ protected:
 	afx_msg void OnPaint();
 	afx_msg HCURSOR OnQueryDragIcon();
 	DECLARE_MESSAGE_MAP()
+public:
+	CComboBox m_SelectProtocols;
+	CEdit m_TransferInterval;
+	CEdit m_InputDeviceId;
+	afx_msg void OnBnClickedAddDeviceId();
+	afx_msg void OnBnClickedRemoveDeviceId();
+	afx_msg void OnBnClickedExportDeviceIdTemplet();
+	CListBox m_AddedList;
+	afx_msg void OnBnClickedImportDeviceId();
+	CDateTimeCtrl m_SystemTime;
 };
